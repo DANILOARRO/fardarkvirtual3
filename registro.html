@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html land="en">
+    <head>
+        <meta charset="uft-8">
+        <meta name="viewport" content="width=device.width, initial-scale=1.0"> 
+        <title>Fardark</title>
+        <link rel="stylesheet" href="style.css" />
+        
+    </head>
+    <body>
+        <div class="formulario">
+            <h1>iniciar registro</h1>
+            <form method="post">
+                <div class="usuario">
+                    <input placeholder="nombre de usuario" type="text" required>
+                    
+                </div>
+                <div class="apellidos">
+                    <input  placeholder="apellidos" type="text" required> 
+                </div>
+                <div class ="cedula">
+                    <input placeholder="cedula" type="number" required  min="6" max="11">
+                </div>
+                <div>
+                    <input type="text" class="date"  placeholder="Selecciona fecha de nacimiento" onfocus="(this.type='date')" onblur="if(this.value===''){this.type='text'}" required>
+                </div>
+            
+                <script>
+                    document.querySelector('.date').addEventListener('focus', function(){
+                        this.type = 'date';
+                    });
+                    document.querySelector('.date').addEventListener('blur', function(){
+                        if (this.value === '') this.type = 'text';
+                    });
+                </script>
+                        <br>
+                <a href="http://127.0.0.1:5500/codigo%201.0/index.html">
+                   <button>Ingresar</button>
+                </a>
+            </form>
+            <a href="http://127.0.0.1:5500/login.html">
+                <button>regresar</button>
+             </a>
+        </div>
+        
+    </body>
+</html>
